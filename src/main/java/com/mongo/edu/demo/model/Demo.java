@@ -1,12 +1,12 @@
 package com.mongo.edu.demo.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "demo")
 public class Demo {
 
-    @Field("_id")
+    @Id
     private String objectId;
     private String name;
     private String location;
