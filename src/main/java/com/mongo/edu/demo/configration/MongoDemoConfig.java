@@ -40,7 +40,7 @@ public class MongoDemoConfig extends AbstractMongoConfiguration {
         System.out.println("mongo host: " + host);
         System.out.println("mongo db: " + db);
 
-        MongoCredential credential = MongoCredential.createMongoCRCredential(userName, db, password.toCharArray());
+        MongoCredential credential = MongoCredential.createCredential(userName, db, password.toCharArray());
         ServerAddress serverAddress = new ServerAddress(host, Integer.parseInt(port));
 
         return new MongoClient(serverAddress, new ArrayList<MongoCredential>() {{
